@@ -1,10 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
+  color: #5a5a5a;
   font-family: "Lora", serif;
-}
-#hh {
-  background-color: aqua;
 }

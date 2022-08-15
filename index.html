@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Bank</title>
+    <title>Personal Bank!!</title>
+    <!-- Favicon -->
+    <link rel="import" href="media/img/personal-bank-fav.png" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font -->
@@ -19,10 +21,42 @@
   </head>
   <body>
     <header>
-      <h1 id="hh" class="text-5xl text-center mt-6">
-        Welcome to my
+      <h1 class="text-5xl text-center mt-6">
+        Welcome to
         <span class="font-semibold text-blue-700">Personal Bank!!</span>
       </h1>
     </header>
+    <main>
+      <section
+        id="login-section"
+        class="bg-blue-100 w-9/12 mx-auto mt-12 p-16 rounded-lg border-2 border-blue-400"
+      >
+        <h3 class="text-3xl mb-5 font-medium">
+          Please <span class="font-semibold text-blue-700">Login!</span>
+        </h3>
+        <div class="ml-3">
+          <input
+            class="block w-9/12 mb-4 px-3 py-1 rounded-lg"
+            type="email"
+            name=""
+            id=""
+            placeholder="Email Address"
+          />
+          <input
+            class="block w-9/12 mb-4 px-3 py-1 rounded-lg"
+            type="password"
+            name=""
+            id=""
+            placeholder="Password"
+          />
+          <button
+            class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-slate-50 font-semibold"
+          >
+            Login
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="js/login.js"></script>
   </body>
 </html>
