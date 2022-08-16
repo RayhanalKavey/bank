@@ -33,16 +33,17 @@
         <!--1/ Deposite -->
         <div
           class="bg-blue-100 p-8 rounded-lg border-2 border-blue-400 row-span-2 flex gap-y-2 flex-col items-center justify-center"
+          id="deposite-input"
         >
           <h4 class="text-2xl font-medium">Deposite</h4>
-          <div>Amount</div>
+          <div><span id="deposite-amount">0</span> Tk</div>
         </div>
         <!--2/ Balance -->
         <div
           class="bg-orange-200 p-8 rounded-lg border-2 border-blue-400 row-start-3 row-span-2 flex gap-y-2 flex-col items-center justify-center"
         >
           <h4 class="text-2xl font-medium">Balance</h4>
-          <div>Amount</div>
+          <div><span id="calculated-balance">0</span> Tk</div>
         </div>
 
         <!--3/ Withdraw -->
@@ -50,38 +51,42 @@
           class="bg-green-100 p-4 rounded-lg border-2 border-blue-400 row-start-5 row-span-2 flex gap-y-2 flex-col items-center justify-center"
         >
           <h4 class="text-2xl font-medium">Withdraw</h4>
-          <div>Amount</div>
+          <div><span id="withdraw-amount">0</span> Tk</div>
         </div>
         <!--4/ Deposite Money -->
         <div
-          class="bg-blue-100 p-4 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-center justify-center"
+          class="bg-blue-100 p-6 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-start justify-center"
         >
-          <h4 class="text-2xl font-medium">Deposite Money</h4>
+          <h4 class="text-2xl font-medium mb-2">Deposite Money</h4>
           <input
-            class="block px-3 py-1 rounded-lg"
-            type="number"
+            class="block w-3/4 px-4 py-1 rounded-lg ml-4"
+            type="text"
             name=""
-            id=""
+            id="deposite-input-field"
+            placeholder="Deposite Money!"
           />
           <button
-            class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-slate-50 font-semibold"
+            class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-slate-50 font-semibold ml-4"
+            id="deposite-btn"
           >
             Deposite
           </button>
         </div>
         <!--5/ Withdraw Money -->
         <div
-          class="bg-green-100 p-4 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-center justify-center"
+          class="bg-green-100 p-6 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-start justify-center"
         >
-          <h4 class="text-2xl font-medium">Withdraw Money</h4>
+          <h4 class="text-2xl font-medium mb-2">Withdraw Money!</h4>
           <input
-            class="block px-3 py-1 rounded-lg"
-            type="number"
+            class="block w-3/4 px-4 py-1 rounded-lg ml-4"
+            type="text"
             name=""
-            id=""
+            id="withdraw-input-field"
+            placeholder="Withdraw Money"
           />
           <button
-            class="px-6 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-slate-50 font-semibold"
+            class="px-6 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-slate-50 font-semibold ml-4"
+            id="withdraw-btn"
           >
             Withdraw
           </button>
