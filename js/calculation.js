@@ -19,17 +19,22 @@ const btnWithdraw = document.getElementById("withdraw-btn");
 //--------------
 ////////////////In deposite button
 btnDeposite.addEventListener("click", function () {
-  //Add to deposite amount
   const newDepositeAmount = parseFloat(depositeInputField.value);
   const previousDepositeAmont = parseFloat(depositeAmount.innerText);
-  const depositeTotal = previousDepositeAmont + newDepositeAmount;
-  depositeAmount.innerText = depositeTotal;
+  //clear input field
+  depositeInputField.value = "";
+  //For error handling (if the the provided value is not a number)
+  if (isNaN(newDepositeAmount)) {
+    alert("Please provide a valid amount");
+    return;
+  }
   //Add to balance
   const previousBalamce = parseFloat(calculatedBalance.innerText);
   const balanceTotal = previousBalamce + newDepositeAmount;
   calculatedBalance.innerText = balanceTotal;
-  //clear input field
-  depositeInputField.value = "";
+  //Add to deposite amount
+  const depositeTotal = previousDepositeAmont + newDepositeAmount;
+  depositeAmount.innerText = depositeTotal;
   // if (
   //   typeof Number(depositeInputField.value) !== "number" ||
   //   typeof Number(withdrawInputField.value) !== "number"
@@ -44,17 +49,27 @@ console.log();
 
 ///////////////In withdraw button
 btnWithdraw.addEventListener("click", function () {
-  //Add to withdraw balance
   const newWithdrawAmount = parseFloat(withdrawInputField.value);
   const previousWithdrawAmount = parseFloat(withdrawAmount.innerText);
-  const withdrawTotal = previousWithdrawAmount + newWithdrawAmount;
-  withdrawAmount.innerText = withdrawTotal;
-  //deduct from balace
+  ///////clear input field
+  withdrawInputField.value = "";
+  //For error handling (if the the provided value is not a number)
+  if (isNaN(newWithdrawAmount)) {
+    alert("Please provide a valid amount");
+    return;
+  }
+  ///////deduct from balace
   const previousBalamce = parseFloat(calculatedBalance.innerText);
+  //For error handling (if the withdraw amount is bigger than the balance)
+  if (newWithdrawAmount > previousBalamce) {
+    alert("Not enough money");
+    return;
+  }
   const balanceTotal = previousBalamce - newWithdrawAmount;
   calculatedBalance.innerText = balanceTotal;
-  //clear input field
-  withdrawInputField.value = "";
+  ////////Add to withdraw balance
+  const withdrawTotal = previousWithdrawAmount + newWithdrawAmount;
+  withdrawAmount.innerText = withdrawTotal;
 });
 const f = "12";
 console.log(typeof parseFloat(f));
