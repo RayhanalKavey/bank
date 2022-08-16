@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Bank!!</title>
+    <!-- Favicon -->
+    <link rel="import" href="media/img/fav.png" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/general.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center my-7">
+        Let's Calculate
+        <span class="font-semibold text-blue-700">Pocket Money!!</span>
+      </h1>
+    </header>
+    <main>
+      <section
+        class="w-9/12 mx-auto grid grid-rows-6 grid-cols-3 gap-y-4 gap-x-8"
+      >
+        <!--1/ Deposite -->
+        <div
+          class="bg-blue-100 p-8 rounded-lg border-2 border-blue-400 row-span-2 flex gap-y-2 flex-col items-center justify-center"
+        >
+          <h4 class="text-2xl font-medium">Deposite</h4>
+          <div>Amount</div>
+        </div>
+        <!--2/ Balance -->
+        <div
+          class="bg-orange-200 p-8 rounded-lg border-2 border-blue-400 row-start-3 row-span-2 flex gap-y-2 flex-col items-center justify-center"
+        >
+          <h4 class="text-2xl font-medium">Balance</h4>
+          <div>Amount</div>
+        </div>
+
+        <!--3/ Withdraw -->
+        <div
+          class="bg-green-100 p-4 rounded-lg border-2 border-blue-400 row-start-5 row-span-2 flex gap-y-2 flex-col items-center justify-center"
+        >
+          <h4 class="text-2xl font-medium">Withdraw</h4>
+          <div>Amount</div>
+        </div>
+        <!--4/ Deposite Money -->
+        <div
+          class="bg-blue-100 p-4 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-center justify-center"
+        >
+          <h4 class="text-2xl font-medium">Deposite Money</h4>
+          <input
+            class="block px-3 py-1 rounded-lg"
+            type="number"
+            name=""
+            id=""
+          />
+          <button
+            class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-slate-50 font-semibold"
+          >
+            Deposite
+          </button>
+        </div>
+        <!--5/ Withdraw Money -->
+        <div
+          class="bg-green-100 p-4 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-center justify-center"
+        >
+          <h4 class="text-2xl font-medium">Withdraw Money</h4>
+          <input
+            class="block px-3 py-1 rounded-lg"
+            type="number"
+            name=""
+            id=""
+          />
+          <button
+            class="px-6 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-slate-50 font-semibold"
+          >
+            Withdraw
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="js/calculation.js"></script>
+  </body>
+</html>

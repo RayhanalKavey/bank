@@ -14,8 +14,8 @@ loginButton.addEventListener("click", function () {
     emailTyped.toLowerCase() === "personal@bank.com" &&
     passwordTyped === "getMoney"
   ) {
-    console.log("Valid user");
+    window.location.href = "bank-calculation.html";
   } else {
-    console.log("Invalid user");
+    alert("Invalid user");
   }
 });
