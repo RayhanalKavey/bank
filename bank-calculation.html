@@ -21,18 +21,18 @@
   </head>
   <body>
     <header>
-      <h1 class="text-5xl text-center my-7">
+      <h1 class="text-4xl md:text-5xl text-center my-10">
         Let's Calculate
         <span class="font-semibold text-blue-700">Pocket Money!!</span>
       </h1>
     </header>
     <main>
       <section
-        class="w-9/12 mx-auto grid grid-rows-6 grid-cols-3 gap-y-4 gap-x-8 text-xl"
+        class="w-4/5 md:w-9/12 mx-auto grid grid-rows-6 grid-cols-4 md:grid-cols-3 gap-y-4 gap-x-8 text-xl"
       >
         <!--1/ Deposit -->
         <div
-          class="bg-blue-100 p-8 rounded-lg border-2 border-blue-400 row-span-2 flex gap-y-2 flex-col items-center justify-center"
+          class="bg-blue-100 p-8 rounded-lg border-2 border-blue-400 col-span-4 md:col-span-2 md:col-span-1 md:row-span-2 flex gap-y-2 flex-col items-center justify-center"
           id="deposit-input"
         >
           <h4 class="text-2xl font-medium">Deposit</h4>
@@ -40,7 +40,7 @@
         </div>
         <!--2/ Balance -->
         <div
-          class="bg-orange-200 p-8 rounded-lg border-2 border-blue-400 row-start-3 row-span-2 flex gap-y-2 flex-col items-center justify-center"
+          class="bg-orange-200 p-8 rounded-lg border-2 border-blue-400 col-span-4 md:col-span-1 row-start-1 md:row-start-3 md:row-span-2 flex gap-y-2 flex-col items-center justify-center"
         >
           <h4 class="text-2xl font-medium">Balance</h4>
           <div><span id="calculated-balance">500</span> Tk</div>
@@ -48,25 +48,25 @@
 
         <!--3/ Withdraw -->
         <div
-          class="bg-green-100 p-4 rounded-lg border-2 border-blue-400 row-start-5 row-span-2 flex gap-y-2 flex-col items-center justify-center"
+          class="bg-green-100 p-4 rounded-lg border-2 border-blue-400 md:row-start-5 col-span-4 md:col-span-1 md:row-span-2 flex gap-y-2 flex-col items-center justify-center"
         >
           <h4 class="text-2xl font-medium">Withdraw</h4>
           <div><span id="withdraw-amount">0</span> Tk</div>
         </div>
         <!--4/ Deposit Money -->
         <div
-          class="bg-blue-100 p-6 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-start justify-center"
+          class="bg-blue-100 p-6 rounded-lg border-2 border-blue-400 col-span-4 md:col-span-2 md:row-span-3 flex gap-y-4 flex-col items-start justify-center"
         >
           <h4 class="text-2xl font-medium mb-2">Deposit Money</h4>
           <input
-            class="block w-3/4 px-4 py-1 rounded-lg ml-4"
+            class="block text-sm md:text-xl w-5/6 sm:w-3/4 px-4 py-1 rounded-lg ml-4"
             type="text"
             name=""
             id="deposit-input-field"
             placeholder="Deposit Money!"
           />
           <button
-            class="px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-slate-50 font-semibold ml-4"
+            class="text-sm sm:text-xl md:text-2xl px-6 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg text-slate-50 font-semibold ml-4"
             id="deposit-btn"
           >
             Deposit
@@ -74,18 +74,18 @@
         </div>
         <!--5/ Withdraw Money -->
         <div
-          class="bg-green-100 p-6 rounded-lg border-2 border-blue-400 col-span-2 row-span-3 flex gap-y-4 flex-col items-start justify-center"
+          class="bg-green-100 p-6 rounded-lg border-2 border-blue-400 col-span-4 md:col-span-2 md:row-span-3 flex gap-y-4 flex-col items-start justify-center"
         >
           <h4 class="text-2xl font-medium mb-2">Withdraw Money!</h4>
           <input
-            class="block w-3/4 px-4 py-1 rounded-lg ml-4"
+            class="block text-sm md:text-xl w-5/6 sm:w-3/4 px-4 py-1 rounded-lg ml-4"
             type="text"
             name=""
             id="withdraw-input-field"
             placeholder="Withdraw Money"
           />
           <button
-            class="px-6 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-slate-50 font-semibold ml-4"
+            class="text-sm sm:text-xl md:text-2xl px-6 py-2 bg-green-500 hover:bg-green-600 rounded-lg text-slate-50 font-semibold ml-4"
             id="withdraw-btn"
           >
             Withdraw
@@ -93,6 +93,7 @@
         </div>
       </section>
     </main>
-    <script src="js/calculation.js"></script>
+    <script src="js/deposit-btn.js"></script>
+    <script src="js/withdraw-btn.js"></script>
   </body>
 </html>
