@@ -4,6 +4,12 @@ const loginButton = document.getElementById("btn-login");
 const emailField = document.getElementById("user-email");
 const passwordField = document.getElementById("user-password");
 // Event Listener
+
+window.addEventListener("keydown", function (keyPressed) {
+  if (keyPressed.key === "Enter") {
+    loginButton.click();
+  }
+});
 loginButton.addEventListener("click", function () {
   const emailTyped = emailField.value;
   // console.log(emailTyped);
